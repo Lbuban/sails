@@ -1,0 +1,21 @@
+(function(){
+    $(function(){
+
+    $.get("http:localhost:1337/student", function(dogs){
+      //console.log(dogs)
+      //clear out existing tableBody
+      $("#tableBody").empty()
+      //loop over dogs we get from the API and add to tbody with id of tableBody
+      for(let i=0; i <dogs.length; i++) {
+      $("#tableBody").append(`
+        <tr>
+          <td>${dog[i].dogBreed}</td>
+
+        </tr>
+      `)
+      }
+
+    })
+
+    })
+})()
